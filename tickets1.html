@@ -79,8 +79,8 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link active bg-primary" href="tickets.html">Tickets</a></li>
-                <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link active bg-primary" href="tickets1.html">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link " href="contact_us.html">Contact Us</a></li>
             </ul>
         </div>
     </div>
@@ -93,12 +93,12 @@
 </section>
 
 <!-- ================= TICKETS ================= -->
-<section class="container my-5">
+<section class="container">
     <div class="row g-4">
 
         <!-- Kids -->
         <div class="col-md-4">
-            <div class="card ticket-card p-4 text-center h-100">
+            <div class="card ticket-card p-4 text-center h-100 border-primary">
                 <h4>👶 Kids Ticket</h4>
                 <p>Age: 3 – 12 years</p>
                 <div class="price">₹499</div>
@@ -120,7 +120,7 @@
 
         <!-- Senior -->
         <div class="col-md-4">
-            <div class="card ticket-card p-4 text-center h-100">
+            <div class="card ticket-card p-4 text-center h-100 border-primary">
                 <h4>👴 Senior Citizen</h4>
                 <p>Age: 60+ years</p>
                 <div class="price">₹399</div>
@@ -165,8 +165,8 @@
 
                 <div class="d-grid gap-2">
                     <button type="button" class="btn btn-primary" onclick="calculatePrice()">Calculate Price</button>
-                    <button type="button" class="btn btn-primary " onclick="resetCalc()">Reset</button>
-                    <button type="button" class="btn btn-primary" onclick="proceedBooking()">Proceed to Booking</button>
+                    <button type="button" class="btn btn-outline-secondary " onclick="resetCalc()">Reset</button>
+                    <button type="button" class="btn btn-success" onclick="proceedBooking()">Proceed to Booking</button>
                 </div>
 
                 <p class="text-center mt-3 result" id="calcTotal"></p>
