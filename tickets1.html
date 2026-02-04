@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets & Pricing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* HERO */
+        .ticket-hero {
+            background: linear-gradient(135deg, #eef7ff, #ffffff);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 0 0 40px 40px;
+        }
+
+        .ticket-hero h1 {
+            font-weight: 700;
+        }
+
+        /* TICKET CARD */
+        .ticket-card {
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .ticket-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        /* CALCULATOR */
+        .calc-box {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .result {
+            font-size: 22px;
+            font-weight: 600;
+            color: #198754;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-info navbar-dark py-2">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/amusement park logo.png" height="60">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link active bg-primary" href="tickets1.html">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link " href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+
+<section class="ticket-hero">
+    <h1>🎟️ Tickets & Pricing</h1>
+    <p class="mt-2">Choose the perfect ticket and enjoy unlimited fun at DreamRide Park</p>
+</section>
+
+<!-- ================= TICKETS ================= -->
+<section class="container">
+    <div class="row g-4">
+
+        <!-- Kids -->
+        <div class="col-md-4">
+            <div class="card ticket-card p-4 text-center h-100 border-primary">
+                <h4>👶 Kids Ticket</h4>
+                <p>Age: 3 – 12 years</p>
+                <div class="price">₹499</div>
+                <p class="mt-2">✔ Selected Rides<br>✔ Water Park Access</p>
+                <button class="btn btn-primary mt-3">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Adult -->
+        <div class="col-md-4">
+            <div class="card ticket-card p-4 text-center h-100 border-primary">
+                <h4>🧑 Adult Ticket</h4>
+                <p>Age: 13 – 59 years</p>
+                <div class="price">₹799</div>
+                <p class="mt-2">✔ Unlimited Rides<br>✔ Water + Adventure Park</p>
+                <button class="btn btn-primary mt-3">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Senior -->
+        <div class="col-md-4">
+            <div class="card ticket-card p-4 text-center h-100 border-primary">
+                <h4>👴 Senior Citizen</h4>
+                <p>Age: 60+ years</p>
+                <div class="price">₹399</div>
+                <p class="mt-2">✔ Relax Rides<br>✔ Special Assistance</p>
+                <button class="btn btn-primary mt-3">Book Now</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= CALCULATOR + BOOKING SUMMARY ================= -->
+<section class="container my-5">
+    <div class="row g-4">
+
+        <!-- Visitor Details -->
+        <div class="col-md-6">
+            <div class="calc-box h-100">
+                <h5>💡 Visitor Details & Price Calculator</h5>
+
+                <div class="mb-3">
+                    <label class="form-label">Ticket Type</label>
+                    <select class="form-select" id="type">
+                        <option value="499">Kids</option>
+                        <option value="799">Adult</option>
+                        <option value="399">Senior Citizen</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Number of Tickets</label>
+                    <input type="number" class="form-control" id="qty" value="1" min="1">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Day Type</label>
+                    <select class="form-select" id="day">
+                        <option value="0">Weekday</option>
+                        <option value="100">Weekend (+₹100)</option>
+                    </select>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-primary" onclick="calculatePrice()">Calculate Price</button>
+                    <button type="button" class="btn btn-outline-secondary " onclick="resetCalc()">Reset</button>
+                    <button type="button" class="btn btn-success" onclick="proceedBooking()">Proceed to Booking</button>
+                </div>
+
+                <p class="text-center mt-3 result" id="calcTotal"></p>
+            </div>
+        </div>
+
+        <!-- Booking Summary -->
+        <div class="col-md-6">
+            <div class="calc-box h-100">
+                <h5>🎟️ Booking Summary</h5>
+                <p><strong>Ticket Type:</strong> <span id="sType">-</span></p>
+                <p><strong>Quantity:</strong> <span id="sQty">-</span></p>
+                <p><strong>Day Type:</strong> <span id="sDay">-</span></p>
+                <hr>
+                <h4>Total Amount: ₹<span id="sTotal">0</span></h4>
+                <div class="d-grid mt-3">
+                    <button type="button" class="btn btn-primary" onclick="confirmBooking()">Confirm Booking</button>
+                </div>
+                <p id="confirmMsg" class="text-success mt-2" style="display:none;">✅ Booking Confirmed!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function calculatePrice(){
+    const typePrice = parseInt(document.getElementById("type").value);
+    const qty = parseInt(document.getElementById("qty").value);
+    const dayExtra = parseInt(document.getElementById("day").value);
+
+    const total = (typePrice + dayExtra) * qty;
+    document.getElementById("calcTotal").innerText = "Total Price: ₹" + total;
+}
+
+function resetCalc(){
+    document.getElementById("type").value = "499";
+    document.getElementById("qty").value = 1;
+    document.getElementById("day").value = "0";
+    document.getElementById("calcTotal").innerText = "";
+
+    // reset summary
+    document.getElementById("sType").innerText = "-";
+    document.getElementById("sQty").innerText = "-";
+    document.getElementById("sDay").innerText = "-";
+    document.getElementById("sTotal").innerText = "0";
+    document.getElementById("confirmMsg").style.display = "none";
+}
+
+function proceedBooking(){
+    const typePrice = parseInt(document.getElementById("type").value);
+    const qty = parseInt(document.getElementById("qty").value);
+    const dayExtra = parseInt(document.getElementById("day").value);
+
+    const total = (typePrice + dayExtra) * qty;
+
+    // Ticket type name
+    const typeName = typePrice == 499 ? "Kids" : typePrice == 799 ? "Adult" : "Senior Citizen";
+    const dayName = dayExtra == 0 ? "Weekday" : "Weekend (+₹100)";
+
+    // populate summary
+    document.getElementById("sType").innerText = typeName;
+    document.getElementById("sQty").innerText = qty;
+    document.getElementById("sDay").innerText = dayName;
+    document.getElementById("sTotal").innerText = total;
+
+    // alert optional
+    alert(`Booking Summary:\nTicket: ${typeName}\nQuantity: ${qty}\nDay: ${dayName}\nTotal: ₹${total}`);
+}
+
+function confirmBooking(){
+    if(document.getElementById("sType").innerText === "-"){
+        alert("Please proceed to booking first!");
+        return;
+    }
+    document.getElementById("confirmMsg").style.display = "block";
+}
+</script>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-info text-white pt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 mb-4">
+                <h4>DreamRide Park</h4>
+                <p>DreamRide Park offers thrilling rides, fun attractions, and unforgettable family experiences.</p>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="tickets.html" class="text-white text-decoration-none">Tickets</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Park Timings</h4>
+                <p>Mon–Fri: 10 AM – 7 PM</p>
+                <p>Sat–Sun: 10 AM – 9 PM</p>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Contact</h4>
+                <p>Email: info@dreamridepark.com</p>
+                <p>Phone: +91 9284501805</p>
+                <p>Location: Pune, Maharashtra</p>
+            </div>
+
+        </div>
+
+        <hr>
+        <p class="text-center mb-0 pb-3">© 2026 DreamRide Park. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
