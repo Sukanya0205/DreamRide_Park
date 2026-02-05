@@ -63,23 +63,24 @@
 }
 
 
+.light-card {
+  background: #151528;
+  border-radius: 15px;
+  overflow: hidden; /* IMPORTANT */
+  transition: 0.4s;
+}
 
-    .light-card {
-      background: #151528;
-      border-radius: 15px;
-      transition: 0.4s;
-      box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
-    }
+.light-img {
+  width: 100%;
+  height: 220px;      /* same height for all cards */
+  object-fit: cover; /* fills card without distortion */
+  display: block;
+}
+
 
     .light-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 0 25px rgba(255, 0, 200, 0.6);
-    }
-
-    .light-img {
-      height: 200px;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
     }
 
     .btn-glow {
@@ -95,6 +96,19 @@
       color: white;
       box-shadow: 0 0 15px #ff00c8;
     }
+
+    
+/* TIMING */
+.time-box {
+  background: #111;
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.time-box:hover {
+  background: #1a1a1a;
+}
   </style>
 
 
@@ -117,7 +131,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active bg-primary " aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link  " aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about us.html">About Us</a>
@@ -185,55 +199,57 @@
 <!-- Hero Section -->
 <section class="hero">
   <video autoplay muted loop playsinline class="bg-video">
-    <source src="img/bg-videolightshow.mp4" type="video/mp4">
+    <source src="img/lightshowbgvideo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
   <div class="hero-content">
     <h1>✨ Spectacular Light Shows ✨</h1>
     <p>Experience the magic of colors & lights</p>
-    <a href="#shows" class="btn btn-glow mt-3">Explore Shows</a>
+    
   </div>
 </section>
 
 
 <!-- Light Show Section -->
-<section class="container py-5" id="shows">
+
+<section class="container-fluid py-5  bg-white" id="shows">
   <div class="row text-center mb-4">
-    <h2>Our Light Shows</h2>
-    <p class="text-white">Perfect for events, concerts & celebrations</p>
+     <h2 class="text-dark">Light & Fireworks Show</h2>
+    <p class="text-dark">A Sky Full of Lights and Wonder</p>
   </div>
+   
 
   <div class="row g-4">
     <div class="col-md-4">
-      <div class="light-card">
-        <img src="https://images.unsplash.com/photo-1518972559570-7cc1309f3229" class="img-fluid light-img">
+      <div class="light-card t">
+        <img src="img/lightshowimg1.jpeg" class="img-fluid light-img">
         <div class="p-3">
-          <h5>LED Stage Show</h5>
+          <h5>Fireworks over an amusement park</h5>
           <p>Dynamic LED lighting synchronized with music.</p>
-         
+          <a href="#" class="btn btn-glow">View More</a>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="light-card">
-        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063" class="img-fluid light-img">
+        <img src="img/lightshowimg2.png" class="img-fluid light-img">
         <div class="p-3">
-          <h5>Laser Light Show</h5>
+          <h5>Ferris wheel & fireworks</h5>
           <p>High-energy laser effects for night events.</p>
-         
+          <a href="#" class="btn btn-glow">View More</a>
         </div>
       </div>
     </div>
 
     <div class="col-md-4">
       <div class="light-card">
-        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" class="img-fluid light-img">
+        <img src="img/lightshowimg3.jpeg" class="img-fluid light-img">
         <div class="p-3">
-          <h5>Festival Lighting</h5>
+          <h5>Night carnival with bright lights on rides</h5>
           <p>Colorful lighting setup for festivals & weddings.</p>
-          
+          <a href="#" class="btn btn-glow">View More</a>
         </div>
       </div>
     </div>
@@ -242,18 +258,35 @@
 
 
 
+<!-- SHOW TIMINGS -->
+<section class="py-5 bg-black">
+  <div class="container">
+    <h2 class="section-title fw-bold">Show Schedule</h2>
 
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="time-box">
+          <h5>Laser Spectacle</h5>
+          <p>7:00 PM – 7:30 PM</p>
+        </div>
+      </div>
 
+      <div class="col-md-4">
+        <div class="time-box">
+          <h5>Dancing Fountain</h5>
+          <p>8:00 PM – 8:30 PM</p>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-
+      <div class="col-md-4">
+        <div class="time-box">
+          <h5>Fireworks Finale</h5>
+          <p>9:00 PM – 9:20 PM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- main section end -->
 
 
