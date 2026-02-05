@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking | DreamRide Park</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body { background-color: #f8f9fa; }
+
+    .booking-hero {
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      padding: 50px 10px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .booking-card {
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/amusement park logo.png" height="60">
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tickets2.html">Tickets</a></li>
+        <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+        <li class="nav-item"><a class="nav-link active bg-primary rounded" href="booking_new.html">Booking</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="booking-hero">
+  <h1>Complete Your Booking</h1>
+  <p>Just one step away from an unforgettable experience!</p>
+</section>
+
+<div class="container">
+  <div class="alert alert-info text-center">
+    <strong>Visitor Details & Confirmation</strong>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row g-4">
+
+    <!-- FORM -->
+    <div class="col-md-7">
+      <div class="card p-4 shadow-sm">
+
+        <h4 class="mb-4">👥 Visitor Details</h4>
+
+        <form id="bookingForm">
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mobile</label>
+              <input type="tel" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Gender</label>
+              <select class="form-control" required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Visitor Type</label>
+              <select class="form-control" required>
+                <option value="">Select Visitor Type</option>
+                <option>Individual</option>
+                <option>Family</option>
+                <option>School Group</option>
+                <option>Corporate Group</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Age</label>
+              <input type="number" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Visit Date</label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label class="form-label">Adults (₹799)</label>
+              <input type="number" id="adults" class="form-control" value="0" min="0">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Children (₹499)</label>
+              <input type="number" id="children" class="form-control" value="0" min="0">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Seniors (₹399)</label>
+              <input type="number" id="seniors" class="form-control" value="0" min="0">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Total Amount</label>
+            <input type="text" id="totalAmount" class="form-control" readonly>
+          </div>
+
+          <div class="d-flex gap-3">
+            <button type="submit" class="btn btn-success w-50">
+              💳 Proceed to Payment
+            </button>
+            <button type="reset" class="btn btn-outline-secondary w-50">
+              🔄 Reset Details
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE CARD -->
+    <div class="col-md-5"> 
+        <div class="card booking-card p-4 h-100"> 
+            <h4 class="mb-3"> What Awaits You at DreamRide</h4>
+             <div class="mb-3 d-flex align-items-start gap-3"> 
+                <i class="bi bi-lightning-charge-fill text-warning fs-3"></i> 
+                <div> <h6 class="mb-1">Thrilling Rides</h6> 
+                    <small class="text-muted">High-speed roller coasters & adventure rides</small> </div> 
+                </div>
+                 <div class="mb-3 d-flex align-items-start gap-3"> 
+                    <i class="bi bi-water text-primary fs-3"></i> 
+                    <div> <h6 class="mb-1">Water Attractions</h6>
+                         <small class="text-muted">Wave pools, slides & splash zones</small> 
+                        </div>
+                     </div>
+                      <div class="mb-3 d-flex align-items-start gap-3">
+                         <i class="bi bi-people-fill text-success fs-3"></i> 
+                         <div> <h6 class="mb-1">Family Friendly</h6> 
+                            <small class="text-muted">Safe & fun activities for all age groups</small> 
+                        </div> 
+                    </div>
+                     <div class="mb-3 d-flex align-items-start gap-3">
+                         <i class="bi bi-shield-check text-info fs-3"></i> 
+                         <div> <h6 class="mb-1">Safety First</h6> 
+                            <small class="text-muted">Trained staff & regular safety checks</small>
+                         </div> 
+                        </div>
+                         <hr>
+                          <div class="text-center"> <span class="badge bg-success me-2">✔ Secure Payment</span> 
+                            <span class="badge bg-primary me-2">✔ Instant Entry</span>
+                             <span class="badge bg-warning text-dark">✔ No Hidden Charges</span>
+                             </div> 
+                             <hr> 
+                             <small class="text-muted"> ⏰ Park Timings:<br> Weekdays: 10:00 AM – 7:00 PM<br> Weekends: 10:00 AM – 9:00 PM </small> 
+                            </div> 
+                        </div> 
+                    </div> 
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-info text-white pt-5 mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <h4>DreamRide Park</h4>
+            <p>
+              DreamRide Park offers thrilling rides, fun attractions, and
+              unforgettable family experiences.
+            </p>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="tickets2.html" class="text-white text-decoration-none"
+                  >Tickets</a
+                >
+              </li>
+              <li>
+                <a href="contact_us1.html" class="text-white text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Park Timings</h4>
+            <p>Mon–Fri: 10 AM – 7 PM</p>
+            <p>Sat–Sun: 10 AM – 9 PM</p>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Contact</h4>
+            <p>Email: info@dreamridepark.com</p>
+            <p>Phone: +91 9284501805</p>
+            <p>Location: Pune, Maharashtra</p>
+          </div>
+        </div>
+
+        <hr />
+        <p class="text-center mb-0 pb-3">
+          © 2026 DreamRide Park. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const adults = document.getElementById("adults");
+  const children = document.getElementById("children");
+  const seniors = document.getElementById("seniors");
+  const totalAmount = document.getElementById("totalAmount");
+  const bookingForm = document.getElementById("bookingForm");
+
+  function calculateTotal() {
+    let total =
+      adults.value * 799 +
+      children.value * 499 +
+      seniors.value * 399;
+
+    totalAmount.value = "₹ " + total;
+    return total;
+  }
+
+  [adults, children, seniors].forEach(el =>
+    el.addEventListener("input", calculateTotal)
+  );
+
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let total = calculateTotal();
+
+    if (total === 0) {
+      alert("❌ Please select at least one ticket.");
+      return;
+    }
+
+    alert(
+      "✅ Booking Successful!\nTotal Amount: ₹" + total +
+      "\nRedirecting to payment..."
+    );
+
+    setTimeout(() => {
+      window.location.href = "payment.html";
+    }, 1500);
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
