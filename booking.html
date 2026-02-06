@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .booking-card {
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .summary h4 {
+            font-weight: 700;
+        }
+
+        .summary small {
+            line-height: 1.6;
+        }
+
+        /* Equal height for both boxes */
+        .equal-height {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+<nav class="navbar navbar-expand-lg bg-info navbar-dark py-2">
+<div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="img/amusement park logo.png" height="60">
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="tickets1.html">Tickets</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link active bg-primary" href="booking.html">Booking</a></li>
+        </ul>
+    </div>
+</div>
+</nav>
+</header>
+
+<section class="container my-5">
+    <div class="row g-4 align-items-stretch">
+
+        <!-- ================= VISITOR DETAILS ================= -->
+        <div class="col-md-7">
+            <div class="card booking-card p-4 h-100 equal-height">
+                <h4 class="mb-3">🧑 Visitor Details</h4>
+
+                <form id="bookingForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="visitorName" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="visitorEmail" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" id="visitorPhone" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Visit Date</label>
+                            <input type="date" class="form-control" id="visitorDate" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Special Request (optional)</label>
+                        <textarea class="form-control" id="visitorRequest" rows="3"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-success">Confirm Booking</button>
+                        <button type="reset" class="btn btn-outline-secondary">Reset Details</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ================= BOOKING SUMMARY ================= -->
+        <div class="col-md-5">
+            <div class="card booking-card summary p-4 h-100 equal-height">
+                <h4 class="mb-3">🎟️ Booking Summary</h4>
+
+                <p><strong>Park:</strong> DreamRide Park</p>
+                <p><strong>Ticket Type:</strong> <span id="sType"></span></p>
+                <p><strong>Quantity:</strong> <span id="sQty"></span></p>
+                <p><strong>Day Type:</strong> <span id="sDay"></span></p>
+
+                <hr>
+
+                <p>Base Price: ₹<span id="sBase"></span></p>
+                <p>Extra Charges: ₹<span id="sExtra"></span></p>
+
+                <h4 class="text-success">
+                    Total Payable: ₹<span id="sTotal"></span>
+                </h4>
+
+                <hr>
+
+                <small class="text-muted">
+                    ⏰ Park Timings:<br>
+                    Weekdays: 10:00 AM – 7:00 PM<br>
+                    Weekends: 10:00 AM – 9:00 PM<br>
+                    ⚠️ Tickets valid only for selected date
+                </small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-info text-white pt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 mb-4">
+                <h4>DreamRide Park</h4>
+                <p>DreamRide Park offers thrilling rides, fun attractions, and unforgettable family experiences.</p>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="tickets.html" class="text-white text-decoration-none">Tickets</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Park Timings</h4>
+                <p>Mon–Fri: 10 AM – 7 PM</p>
+                <p>Sat–Sun: 10 AM – 9 PM</p>
+            </div>
+
+            <div class="col-lg-3 mb-4">
+                <h4>Contact</h4>
+                <p>Email: info@dreamridepark.com</p>
+                <p>Phone: +91 9284501805</p>
+                <p>Location: Pune, Maharashtra</p>
+            </div>
+
+        </div>
+
+        <hr>
+        <p class="text-center mb-0 pb-3">© 2026 DreamRide Park. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Fill Booking Summary from localStorage
+    window.addEventListener("DOMContentLoaded", () => {
+        const type = localStorage.getItem("ticketType") || "Adult";
+        const qty = parseInt(localStorage.getItem("ticketQty")) || 2;
+        const day = localStorage.getItem("ticketDay") || "Weekend";
+        const total = parseInt(localStorage.getItem("ticketTotal")) || 1798;
+
+        document.getElementById("sType").innerText = type;
+        document.getElementById("sQty").innerText = qty;
+        document.getElementById("sDay").innerText = day;
+        document.getElementById("sTotal").innerText = total;
+
+        const extra = day === "Weekend" ? 100*qty : 0;
+        document.getElementById("sBase").innerText = total - extra;
+        document.getElementById("sExtra").innerText = extra;
+    });
+
+    // Handle Confirm Booking
+    document.getElementById("bookingForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const name = document.getElementById("visitorName").value;
+        const email = document.getElementById("visitorEmail").value;
+        const phone = document.getElementById("visitorPhone").value;
+        const date = document.getElementById("visitorDate").value;
+
+        if(!name || !email || !phone || !date){
+            alert("❌ Please fill all required fields!");
+            return;
+        }
+
+        alert(`✅ Booking Confirmed!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nVisit Date: ${date}\n\nEnjoy your day at DreamRide Park!`);
+
+        // Clear localStorage and reset form
+        localStorage.clear();
+        document.getElementById("bookingForm").reset();
+
+        // Optional: Redirect to Thank You page
+        // window.location.href = "thankyou.html";
+    });
+</script>
+
+</body>
+</html>
