@@ -4,18 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>About Us</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* General */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #0d6efd;
+        }
+
+        /* Navbar Hover */
+        .navbar .nav-link {
+            transition: color 0.3s ease, background 0.3s ease;
+            border-radius: 6px;
+            padding: 6px 12px;
+        }
+
+        .navbar .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        /* Image Hover */
+        img {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Card Hover (Mission / Vision / Values) */
+        .card {
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Why Choose Us Hover */
+        .why-box {
+            padding: 20px;
+            border-radius: 12px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .why-box:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-8px);
+        }
+
+        /* Stats Hover */
+        .stat-box h2 {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .stat-box:hover h2 {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+
+        /* Footer Links Hover */
+        footer a {
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #000;
+            padding-left: 6px;
+        }
+
+        /* Carousel height */
+        .about-carousel {
+            height: 75vh;
+        }
+
+        .about-carousel .carousel-item {
+            height: 75vh;
+            position: relative;
+        }
+
+        .about-carousel img {
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(55%);
+            /* faint image */
+        }
+
+        /* Text overlay */
+        .carousel-caption {
+            bottom: 30%;
+            animation: fadeUp 1.5s ease-in-out;
+        }
+
+        .carousel-caption h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2rem;
+            color: #f1f1f1;
+        }
+
+        /* Text animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-primary  " data-bs-theme="dark" >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/amusement park logo.png" alt="Bootstrap" width="100" height="100">
+        <nav class="navbar navbar-expand-lg bg-info  navbar-dark navbar-gradient py-2 sticky-top">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand d-flex align-items-center " href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="60" class="me-2">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -27,8 +155,8 @@
                         <li class="nav-item">
                             <a class="nav-link  " aria-current="page" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item active bg-info">
-                            <a class="nav-link" href="about us.html">About Us</a>
+                        <li class="nav-item">
+                            <a class="nav-link active bg-primary" href="about us.html">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="entertainment.html" role="button"
@@ -50,14 +178,19 @@
                                 </li>
                             </ul>
                         </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link   " aria-current="page" href="tickets.html">Tickets</a>
+                            <a class="nav-link" aria-current="page" href="tickets2.html">Tickets</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="booking_new.html">Booking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link   " aria-current="page" href="offers.html">Offers</a>
+                            <a class="nav-link" aria-current="page" href="offers.html">Offers</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link   " aria-current="page" href="contact.html">Contact Us</a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contact_us1.html">Contact Us</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -81,13 +214,63 @@
             </div>
         </nav>
     </header>
+    <!-- header section end -->
+
+    <!-- slidder start -->
+    <section>
+        <div id="aboutCarousel" class="carousel slide carousel-fade about-carousel" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="img/amusement-park-237200_640.jpg" class="d-block w-100" alt="DreamRide Park">
+                    <div class="carousel-caption text-center">
+                        <h1>Welcome to DreamRide Park</h1>
+                        <p>Where thrill, fun, and memories come alive</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="img/watershow3.jpg" class="d-block w-100" alt="Rides">
+                    <div class="carousel-caption text-center">
+                        <h1>World-Class Rides</h1>
+                        <p>Experience high-speed thrills and family fun</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="img/h4light.jpeg" class="d-block w-100" alt="Family Fun">
+                    <div class="carousel-caption text-center">
+                        <h1>Fun for Everyone</h1>
+                        <p>Kids zones, shows, dining & unforgettable moments</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </section>
+    <!-- slidder End -->
 
 
 
-    <section id="about" class="py-5">
+    <section id="about" class="py-5 mt-5">
         <div class="container">
             <div class="row align-items-center">
 
+                <h3 class="text-center">Welcome To DreamRide Park</h3>
                 <!-- About Image -->
                 <div class="col-lg-5 mb-4">
                     <img src="img/theme-park-6592969_640.jpg" alt="DreamRide Park" class="img-fluid rounded shadow">
@@ -126,17 +309,17 @@
         <div class="container">
             <div class="row align-items-center m-3">
                 <div class="col-md-7">
-                   <h3 class="mb-3">World-Class Rides & Attractions</h3>
-                <p>
-                    DreamRide Park features state-of-the-art rides, thrilling roller
-                    coasters, water attractions, and interactive zones designed with
-                    international safety standards.
-                </p>
-                <p>
-                    Along with adventure rides, the park offers dedicated family areas,
-                    kids’ zones, live entertainment shows, and food courts serving a wide
-                    range of cuisines.
-                </p>
+                    <h3 class="mb-3">World-Class Rides & Attractions</h3>
+                    <p>
+                        DreamRide Park features state-of-the-art rides, thrilling roller
+                        coasters, water attractions, and interactive zones designed with
+                        international safety standards.
+                    </p>
+                    <p>
+                        Along with adventure rides, the park offers dedicated family areas,
+                        kids’ zones, live entertainment shows, and food courts serving a wide
+                        range of cuisines.
+                    </p>
 
                 </div>
                 <div class="col-md-5">
@@ -151,12 +334,94 @@
         </div>
     </section>
 
+    <!-- Mission Vision Values -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Our Mission</h5>
+                            <p>Deliver thrilling and safe entertainment for all.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Our Vision</h5>
+                            <p>Become the most loved amusement park destination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Our Values</h5>
+                            <p>Safety, innovation, hospitality, and happiness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section class="py-5">
+        <div class="container mb-3">
+            <h2 class="text-center fw-bold mb-4">Why Choose DreamRide Park?</h2>
+            <div class="row text-center">
+                <div class="col-md-3 why-box">
+                    <h5>🎢 World-Class Rides</h5>
+                    <p>High-thrill and family-friendly attractions.</p>
+                </div>
+                <div class="col-md-3 why-box">
+                    <h5>🛡️ Safety First</h5>
+                    <p>International safety standards followed.</p>
+                </div>
+                <div class="col-md-3 why-box">
+                    <h5>👨‍👩‍👧‍👦 Family Friendly</h5>
+                    <p>Entertainment for all age groups.</p>
+                </div>
+                <div class="col-md-3 why-box">
+                    <h5>🍔 Comfort & Food</h5>
+                    <p>Food courts and relaxation zones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats -->
+    <section class="bg- text-primary py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 stat-box">
+                    <h2 class="fw-bold">100+</h2>
+                    <p>Rides</p>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <h2 class="fw-bold">1M+</h2>
+                    <p>Visitors</p>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <h2 class="fw-bold">10+</h2>
+                    <p>Awards</p>
+                </div>
+                <div class="col-md-3 stat-box">
+                    <h2 class="fw-bold">365</h2>
+                    <p>Days Open</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer>
         <!-- footer section start -->
         <section>
-            <footer class="bg-primary text-white pt-5 ">
+            <footer class="bg-info text-white pt-5 ">
                 <div class="container">
                     <div class="row">
 
@@ -176,8 +441,8 @@
                                 <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
                                 <li><a href="entertainment.html"
                                         class="text-light text-decoration-none">Entertainment</a></li>
-                                <li><a href="tickets.html" class="text-light text-decoration-none">Tickets</a></li>
-                                <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                                <li><a href="tickets2.html" class="text-light text-decoration-none">Tickets</a></li>
+                                <li><a href="contact_us1.html" class="text-light text-decoration-none">Contact Us</a></li>
                             </ul>
                         </div>
 

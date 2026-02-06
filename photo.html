@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Booking</title>
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
-<header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/amusement park logo.png" alt="Bootstrap" width="100" height="100">
+    <!--Header Start-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info  navbar-dark navbar-gradient py-2">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand d-flex align-items-center " href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="60" class="me-2">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link  " aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about us.html">About Us</a>
@@ -47,18 +54,23 @@
                                 </li>
                             </ul>
                         </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link   " aria-current="page" href="tickets.html">Tickets</a>
+                            <a class="nav-link" aria-current="page" href="tickets.html">Tickets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link   " aria-current="page" href="offers.html">Offers</a>
+                            <a class="nav-link" aria-current="page" href="booking_new.html">Booking</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link   " aria-current="page" href="contact.html">Contact Us</a>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="offers.html">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
                         </li>
 
-                        <li class="nav-item dropdown  active bg-info">
-                            <a class="nav-link dropdown-toggle" href="gallary.html" role="button"
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active bg-primary" href="vedio.html" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Gallery
                             </a>
@@ -79,9 +91,129 @@
         </nav>
     </header>
 
-    <h1>Photos</h1>
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--Style Start-->
+    <style>
+        h2{
+            color:blue;
+            text-align: center;
+        }
+        h2:hover{
+            color:red;
+        }
 
+    </style>
+    <!--Style Start-->
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Photo Gallery</h2>
+
+            <div class="row g-4">
+                <!-- Image 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Rounded Ride</h2>
+                    <img src="img/ride4.jpg" class="img-fluid rounded shadow">
+
+                </div>
+
+                <!-- Image 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Carnival Ride</h2>
+                    <img src="img/carnival-6294231_640.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Carousel Ride</h2>
+                    <img src="img/carousel-226687_640.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Roller Coaster</h2>
+                    <img src="img/roller-coaster-526534_640.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Park Riding</h2>
+                    <img src="img/amusement-park-ride-6775933_640.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 6 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">kidsZone</h2>
+                    <img src="img/kidsZone.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 7 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Park Theme</h2>
+                    <img src="img/home page.png" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 8 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Swing Rounded</h2>
+                    <img src="img/theme-park-6592969_640.jpg" class="img-fluid rounded shadow">
+                </div>
+
+                <!-- Image 9 -->
+                <div class="col-md-4 col-sm-6">
+                    <h2 class="text-center mb-4">Rounded Riding</h2>
+                    <img src="img/ride3.jpg" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Header End-->
+
+    <!--Footer Start-->
+    <footer class="bg-info text-white pt-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 mb-4">
+                    <h4>DreamRide Park</h4>
+                    <p>DreamRide Park offers thrilling rides, fun attractions, and unforgettable family experiences.</p>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="gallery1.html" class="text-white text-decoration-none">Gallery</a></li>
+                        <li><a href="vedio.html" class="text-white text-decoration-none">Video</a></li>
+                        <li><a href="" class="text-white text-decoration-none">Dinning</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h4>Park Timings</h4>
+                    <p>Mon–Fri: 10 AM – 7 PM</p>
+                    <p>Sat–Sun: 10 AM – 9 PM</p>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h4>Contact</h4>
+                    <p>Email: info@dreamridepark.com</p>
+                    <p>Phone: +91 9284501805</p>
+                    <p>Location: Pune, Maharashtra</p>
+                </div>
+
+            </div>
+
+            <hr>
+            <p class="text-center mb-0 pb-3">© 2026 DreamRide Park. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!--Footer End-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>

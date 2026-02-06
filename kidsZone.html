@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+ .carousel-item {
+  overflow: hidden; /* prevents image overflow during zoom */
+}
+
+.zoom-img {
+  transform: scale(1);
+  transition: transform 3s ease-in-out;
+}
+
+.carousel-item.active .zoom-img {
+  transform: scale(1.15); /* zoom level */
+}
+</style>
+</head>
+<body>
+
+    <!-- header section start -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info  navbar-dark navbar-gradient py-2">
+            <div class="container-fluid align-items-center">
+                <a class="navbar-brand d-flex align-items-center " href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="60" class="me-2">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link  " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about us.html">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="entertainment.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Entertainment
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="horror-show.html">Horror Show</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="games.html">Games</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="lightshow.html">Light Show</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item active bg-primary" href="kidsZone.html">Kids Zone</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="tickets.html">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="offers.html">Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="gallary.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="photo.html">Photos</a></li>
+                                <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
+                                <li><a class="dropdown-item" href="dinning.html">Dinning</a></li>
+
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header section end -->
+
+
+    <!-- Main Section start -->
+
+<main>
+    <section>
+
+     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item ">
+      <img src="img/kidsSlider1.webp" class="d-block w-100 zoom-img" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/kidsSlider2.webp" class="d-block w-100 zoom-img" alt="...">
+    </div>
+    <div class="carousel-item active">
+      <img src="img/kidsSlider3.webp" class="d-block w-100 zoom-img" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="img/kidsSlider4.webp" class="d-block w-100 zoom-img" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+ </section>
+
+<h1 class="mt-5 text-center">Kids Play Zone</h1>
+ <section class="mt-5 mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/kidsGrid1.png" alt="game img" class="img-fluid">
+            </div>
+             <div class="col-md-6 fs-5 p-3">
+                <h3 class="text-center">Hop-A-Little</h3>
+                <p>Hop-A-Little welcomes the youngest adventurers of Dream Ride to a world of vibrant play and discovery. Tailored for the boundless energy of kids and toddlers, our kids' zone in Pune brimswith safe, engaging activities that foster fun learning. Whether celebrating a birthday or just enjoying a day out, the warm, family-friendly atmosphere is perfect for creating giggles, grins, and cherished memories. This cosy nook is an idyllic setting for laughter-filled family functions or birthday celebrations.</p></div>
+        </div>
+    </div>
+
+ </section>
+
+</main>
+
+<!-- main section end -->
+   
+    
+
+
+
+
+
+
+    <footer>
+        <!-- footer section start -->
+        <section>
+            <footer class="bg-info text-white pt-5 ">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Section 1: About -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">DreamRide Park</h4>
+                            <p>
+                                DreamRide Park is a world-class amusement park offering thrilling rides,
+                                fun attractions, and unforgettable family experiences.
+                            </p>
+                        </div>
+
+                        <!-- Section 2: Quick Links -->
+                        <div class="col-lg-3 mb-4">
+                            <h4 class="text-uppercase">Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="entertainment.html"
+                                        class="text-light text-decoration-none">Entertainment</a></li>
+                                <li><a href="tickets.html" class="text-light text-decoration-none">Tickets</a></li>
+                                <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Section 3: Timings -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">Park Timings</h4>
+                            <p>Monday - Friday: 10:00 AM - 7:00 PM</p>
+                            <p>Saturday - Sunday: 10:00 AM -9:00 PM</p>
+                        </div>
+
+                        <!-- Section 4: Contact -->
+                        <div class="col-lg-3 mb-4">
+                            <h4 class="text-uppercase">Contact Info</h4>
+                            <p>Email: info@dreamridepark.com</p>
+                            <p>Phone: +91 9284501805</p>
+                            <p>Location: Pune, Maharashtra</p>
+                        </div>
+
+                    </div>
+
+                    <hr class="border-secondary">
+
+                    <!-- Footer Bottom -->
+                    <div class="text-center pb-3">
+                        <p class="mb-0">
+                            © 2026 DreamRide Park. All Rights Reserved.
+
+                        </p>
+                         <script>
+            var now = new Date();
+             document.write(now.getFullYear(),"<br>");//copyright section
+
+                   document.write(now.toLocaleTimeString(),"<br>")
+
+
+        </script>
+                    </div>
+                </div>
+            </footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
