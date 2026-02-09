@@ -1,202 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Offers | DreamRide Park</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Offers | DreamRide Park</title>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
-      background: #f4f6f9;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: #eef5ff;
     }
 
-    .offers-hero {
-  background: linear-gradient(135deg, hsl(0, 11%, 85%), #fad0c4, #fad0c4, #fbc2eb); 
-  padding: 60px 15px;
-  text-align: center;
-  border-radius: 0 0 60px 60px;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-}
+    /* ===== HERO ===== */
+    .hero-offer {
+      height: 92vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+        url('img/park_banner.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #ffe53b, #ff2525, #ff7e5f);
-   -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s infinite linear;
-}
+    .hero-offer h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
 
-.hero-subtitle {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  font-weight: 500;
-}
+    .hero-offer p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
 
-/* Floating shapes */
-.shape {
-  position: absolute;
-  opacity: 0.4;
-  animation: floatShape 6s ease-in-out infinite alternate;
-}
+    .hero-btn {
+      margin-top: 20px;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      background: linear-gradient(45deg, #ff7a18, #ff3d77);
+      border: none;
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 80, 120, 0.6);
+      transition: 0.3s;
+    }
 
-.shape-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #ffea00;
-  top: 20%;
-  left: 10%;
-}
+    .hero-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 30px rgba(255, 80, 120, 0.9);
+    }
 
-.shape-circle.small {
-  width: 40px;
-  height: 40px;
-  top: 60%;
-  left: 80%;
-  background: #00f2ff;
-}
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-/* .shape-triangle {
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 70px solid #ff6a00;
-  top: 50%;
-  left: 50%;
-} */
-
-.shape-triangle.small {
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 35px solid #ff00ff;
-  top: 10%;
-  left: 70%;
-}
-
-/* Animations */
-@keyframes floatShape {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(45deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-@keyframes shine {
-  0% { background-position: -200px; }
-  100% { background-position: 200px; }
-}
-
-
-    /* Offer Cards */
+    /* ===== OFFER CARDS ===== */
     .offer-card {
-      border-radius: 20px;
-      position: relative;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      transition: 0.35s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #fff;
     }
 
     .offer-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transform: translateY(-12px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
+
+    .offer-card img {
+      height: 200px;
+      object-fit: cover;
     }
 
     .discount-badge {
       position: absolute;
       top: 15px;
-      right: -35px;
-      background: #dc3545;
-      color: #fff;
-      padding: 5px 50px;
-      transform: rotate(45deg);
-      font-weight: bold;
-      font-size: 14px;
-      animation: pulse 1.5s infinite;
+      left: 15px;
+      background: #ff3d77;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
     }
 
-    @keyframes pulse {
-      0% { transform: rotate(45deg) scale(1); }
-      50% { transform: rotate(45deg) scale(1.1); }
-      100% { transform: rotate(45deg) scale(1); }
+    .book-btn {
+      border-radius: 30px;
+      font-weight: 600;
     }
 
+    /* ===== COUPON ===== */
     .coupon-box {
-      background: #fff;
-      border-left: 5px dashed #0d6efd;
-      border-radius: 15px;
-      padding: 20px;
-      transition: transform 0.3s ease;
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: 0.3s;
     }
 
     .coupon-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transform: translateY(-8px);
     }
 
-    .coupon-btn {
-      font-size: 0.85rem;
-      padding: 5px 10px;
-      margin-top: 10px;
+    .copy-btn {
+      border-radius: 25px;
+      font-size: 0.9rem;
     }
 
-    /* Countdown */
+    /* ===== COUNTDOWN ===== */
     .countdown {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #ff2525;
-      font-size: 1.2rem;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .countdown div {
-      background: #fff3cd;
-      padding: 10px 15px;
-      border-radius: 10px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    .time-box {
+      background: white;
+      padding: 18px 22px;
+      border-radius: 15px;
+      font-weight: 600;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     }
 
-    /* Carousel */
-    .carousel-inner img {
-      border-radius: 20px;
-      height: 250px;
-      object-fit: cover;
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(45deg, #007cf0, #00dfd8);
+      color: white;
+      font-weight: 500;
     }
 
-    /* Confetti Animation */
-    .confetti {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: #ff2525;
-      top: 0;
-      left: 50%;
-      opacity: 0.7;
-      animation: confettiFall 3s linear infinite;
-    }
-
-    @keyframes confettiFall {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(600px) rotate(360deg); }
-    }
-
-    
+  
         /* Hover dropdown (desktop only) */
-         @media (min-width: 992px) {
+        @media (min-width: 992px) {
             .navbar .dropdown:hover .dropdown-menu {
                 display: block;
                 margin-top: 0;
@@ -218,10 +167,10 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        } 
+        }
 
         /* Mobile spacing improvements */
-         @media (max-width: 991px) {
+        @media (max-width: 991px) {
             .navbar-nav .nav-link {
                 padding: 12px 0;
                 font-size: 1.05rem;
@@ -230,14 +179,158 @@
             .dropdown-menu {
                 text-align: center;
             }
-        } 
-     
+        }
 
+        
+.coupon-section{
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  border-radius: 40px 40px 0 0;
+}
+
+.coupon-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Ticket Design */
+.ticket{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* Circular cut effect */
+.ticket::before,
+.ticket::after{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #0d6efd;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ticket::before{ left: -12px; }
+.ticket::after{ right: -12px; }
+
+.ticket:hover{
+  transform: scale(1.03);
+}
+
+/* Left text */
+.ticket-left h3{
+  margin: 0;
+  color: #0d6efd;
+  font-weight: bold;
+}
+
+.ticket-left p{
+  margin: 0;
+  color: #555;
+}
+
+/* Copy button */
+.ticket-right button{
+  border: none;
+  background: #0d6efd;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ticket-right button:hover{
+  background: #6610f2;
+}
+
+
+.countdown-cards{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual time box */
+.time-card{
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  min-width: 110px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.time-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Number */
+.time-card span{
+  font-size: 32px;
+  font-weight: bold;
+  color: #0d6efd;
+  display: block;
+}
+
+/* Label */
+.time-card p{
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+/* Light background for whole section */
+.coupon-section {
+  background: #fff4e6;        /* light peach */
+  border-radius: 30px;
+}
+
+/* Title color fix (since bg is light now) */
+.coupon-section h2 {
+  color: #ff6a00;
+}
+
+.coupon-section p {
+  color: #555;
+}
+
+/* Ticket layout */
+.coupon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.ticket {
+  width: 100%;
+  max-width: 850px;   /* bigger ticket length */
+  
+  padding: 25px 35px;
+}
+
+
+
+  
   </style>
 </head>
+
 <body>
 
-<header>
+  
     <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
         <div class="container-fluid">
 
@@ -258,7 +351,7 @@
                 <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
 
                     <li class="nav-item">
-                        <a class="nav-link  nav-style " href="index.html">Home</a>
+                        <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -287,7 +380,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active nav-style bg-primary " href="offers1.html">Offers</a>
+                        <a class="nav-link nav-style" href="offers.html">Offers</a>
                     </li>
 
                     <!-- Gallery -->
@@ -310,173 +403,249 @@
             </div>
         </div>
     </nav>
-</header>
 
-<!-- HERO -->
-<section class="offers-hero position-relative overflow-hidden">
-  <h1 class="hero-title">🎉 Mega Offers</h1>
-  <p class="hero-subtitle">Grab your deal before it disappears!</p>
 
-  <!-- Floating shapes -->
-  <div class="shape shape-circle"></div>
-  <div class="shape shape-triangle"></div>
-  <div class="shape shape-circle small"></div>
-  <div class="shape shape-triangle small"></div>
+  <!-- HERO -->
+  <section class="py-5 text-center bg-light">
+  <div class="container">
+
+    <h2 class="fw-bold text-primary">🎡 Mega Park Offers</h2>
+    <p class="text-muted">Enjoy exciting discounts and special combos for family, students & festivals.</p>
+
+    <!-- Decorative line -->
+    <div style="width:80px;height:4px;background:#0d6efd;margin:10px auto 30px;border-radius:10px;"></div>
+
+  </section>
+   
+  <!-- COUNTDOWN -->
+  <section class="container py-3 text-center">
+  <h2 class="fw-bold mb-4">⏰ Offer Ends In</h2>
+
+  <div class="countdown-cards">
+
+    <div class="time-card">
+      <span id="d">00</span>
+      <p>Days</p>
+    </div>
+
+    <div class="time-card">
+      <span id="h">00</span>
+      <p>Hours</p>
+    </div>
+
+    <div class="time-card">
+      <span id="m">00</span>
+      <p>Minutes</p>
+    </div>
+
+    <div class="time-card">
+      <span id="s">00</span>
+      <p>Seconds</p>
+    </div>
+
+  </div>
 </section>
 
 
-<!-- FEATURED OFFERS CAROUSEL -->
-<section class="container my-5">
-  <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/family_offer.jpg" class="d-block w-100" alt="Family Offer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Family Combo - 15% OFF</h5>
-          <p>4+ tickets for family fun!</p>
+  <!-- OFFERS -->
+  <section id="offers" class="container py-5">
+    <h2 class="section-title">🔥 Hot Deals for You</h2>
+
+    <div class="row g-4">
+
+      <!-- Family -->
+      <div class="col-md-4">
+        <div class="card offer-card position-relative">
+          <span class="discount-badge">15% OFF</span>
+          <img src="img/Parkland-Family-Fun-Fest-Sq-Up.jpg" class="w-100" />
+          <div class="p-4 text-center">
+            <h5>Family Combo</h5>
+            <p>Perfect fun package for the whole family.</p>
+            <a href="booking_new.html" class="btn btn-warning book-btn w-100">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="img/student_offer.jpg" class="d-block w-100" alt="Student Offer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Student Discount - 10% OFF</h5>
-          <p>Weekdays only with student ID</p>
+
+      <!-- Student -->
+      <div class="col-md-4">
+        <div class="card offer-card position-relative">
+          <span class="discount-badge">10% OFF</span>
+          <img src="img/students.jpg" class="w-100" />
+          <div class="p-4 text-center">
+            <h5>Student Special</h5>
+            <p>Exclusive weekday discount for students.</p>
+            <a href="booking_new.html" class="btn btn-primary book-btn w-100">Grab Offer</a>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="img/festival_offer.jpg" class="d-block w-100" alt="Festival Offer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Festival Special - 25% OFF</h5>
-          <p>Limited time offer for festive week!</p>
+
+      <!-- Festival -->
+      <div class="col-md-4">
+        <div class="card offer-card position-relative">
+          <span class="discount-badge">25% OFF</span>
+          <img src="img/festival.jpg!d" class="w-100" />
+          <div class="p-4 text-center">
+            <h5>Festival Celebration</h5>
+            <p>Limited-time festive discount on all rides.</p>
+            <a href="booking_new.html" class="btn btn-danger book-btn w-100">Enjoy Now</a>
+          </div>
         </div>
       </div>
+
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+  </section>
+
+  <!-- COUPONS -->
+ 
+<section class="coupon-section py-5">
+  <div class="container text-center">
+
+    <h2 class="fw-bold text-dark mb-4">🎟 Special Coupon Tickets</h2>
+    <p class="text-light mb-5">Grab exciting discounts before they expire!</p>
+
+    <div class="coupon-wrapper">
+
+      <!-- Coupon 1 -->
+      <div class="ticket">
+        <div class="ticket-left">
+          <h3>DREAM10</h3>
+          <p>10% OFF on all tickets</p>
+        </div>
+        <div class="ticket-right">
+          <button onclick="copyCoupon('DREAM10')">COPY</button>
+        </div>
+      </div>
+
+      <!-- Coupon 2 -->
+      <div class="ticket">
+        <div class="ticket-left">
+          <h3>FAMILY15</h3>
+          <p>Extra savings for families</p>
+        </div>
+        <div class="ticket-right">
+          <button onclick="copyCoupon('FAMILY15')">COPY</button>
+        </div>
+      </div>
+
+      <!-- Coupon 3 -->
+      <div class="ticket">
+        <div class="ticket-left">
+          <h3>FEST25</h3>
+          <p>Festival mega discount</p>
+        </div>
+        <div class="ticket-right">
+          <button onclick="copyCoupon('FEST25')">COPY</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- OFFERS SECTION -->
-<section class="container my-5">
-  <h2 class="text-center mb-5">🔥 Hot Offers</h2>
-  <div class="row g-4">
+  
 
-    <div class="col-md-4">
-      <div class="card offer-card p-4 h-100">
-        <span class="discount-badge">15% OFF</span>
-        <h4>👨‍👩‍👧‍👦 Family Combo</h4>
-        <p>Perfect for family outings. Applicable on 4+ tickets.</p>
-        <a href="booking_new.html" class="btn btn-success w-100">Book Now</a>
+
+
+  <!-- FOOTER -->
+<footer class="bg-info text-white pt-5 mt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <h4>DreamRide Park</h4>
+            <p>
+              DreamRide Park offers thrilling rides, fun attractions, and
+              unforgettable family experiences.
+            </p>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="tickets2.html" class="text-white text-decoration-none"
+                  >Tickets</a
+                >
+              </li>
+              <li>
+                <a href="contact_us1.html" class="text-white text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Park Timings</h4>
+            <p>Mon–Fri: 10 AM – 7 PM</p>
+            <p>Sat–Sun: 10 AM – 9 PM</p>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h4>Contact</h4>
+            <p>Email: info@dreamridepark.com</p>
+            <p>Phone: +91 9284501805</p>
+            <p>Location: Pune, Maharashtra</p>
+          </div>
+        </div>
+
+        <hr />
+        <p class="text-center mb-0 pb-3">
+          © 2026 DreamRide Park. All Rights Reserved.
+        </p>
       </div>
-    </div>
+    </footer>
 
-    <div class="col-md-4">
-      <div class="card offer-card p-4 h-100">
-        <span class="discount-badge">10% OFF</span>
-        <h4>🎓 Student Discount</h4>
-        <p>Weekdays only. Valid ID required.</p>
-        <a href="booking_new.html" class="btn btn-primary w-100">Apply Offer</a>
-      </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card offer-card p-4 h-100">
-        <span class="discount-badge">20% OFF</span>
-        <h4>👴 Senior Citizen</h4>
-        <p>Age 60+ enjoy extra savings.</p>
-        <a href="booking_new.html" class="btn btn-warning w-100">Grab Deal</a>
-      </div>
-    </div>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
 
-  </div>
-</section>
+    function copyCoupon(code) {
+      navigator.clipboard.writeText(code);
+      alert('Coupon ' + code + ' copied!');
+    }
+    </script>
 
-<!-- COUPONS -->
-<section class="container my-5">
-  <h3 class="mb-4 text-center">🎟️ Coupon Codes</h3>
-  <div class="row g-4">
+    // ===== COUNTDOWN TIMER FIX =====
+    <script>
+  // Set offer end time (5 days from now)
+  const end = new Date();
+  end.setDate(end.getDate() + 5);
 
-    <div class="col-md-4">
-      <div class="coupon-box">
-        <h5>DREAM10</h5>
-        <p>10% OFF on all tickets</p>
-        <button class="btn btn-outline-primary coupon-btn" onclick="copyCoupon('DREAM10')">Copy Code</button>
-      </div>
-    </div>
+  function updateTimer() {
+    const now = new Date();
+    const diff = end - now;
 
-    <div class="col-md-4">
-      <div class="coupon-box">
-        <h5>FAMILY15</h5>
-        <p>Extra savings for family bookings</p>
-        <button class="btn btn-outline-primary coupon-btn" onclick="copyCoupon('FAMILY15')">Copy Code</button>
-      </div>
-    </div>
+    // If expired
+    if (diff <= 0) {
+      document.querySelector(".countdown-cards").innerHTML =
+        "<h4 class='text-danger'>Offer Expired!</h4>";
+      return;
+    }
 
-    <div class="col-md-4">
-      <div class="coupon-box">
-        <h5>WEEKDAY20</h5>
-        <p>20% OFF on weekday visits</p>
-        <button class="btn btn-outline-primary coupon-btn" onclick="copyCoupon('WEEKDAY20')">Copy Code</button>
-      </div>
-    </div>
+    // Time calculations
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
 
-  </div>
-</section>
-
-<!-- COUNTDOWN -->
-<section class="container my-5">
-  <h3 class="text-center mb-4">⏰ Limited Time Offer Countdown</h3>
-  <div class="countdown" id="countdownTimer">
-    <div><span id="days">00</span> Days</div>
-    <div><span id="hours">00</span> Hours</div>
-    <div><span id="minutes">00</span> Minutes</div>
-    <div><span id="seconds">00</span> Seconds</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-info text-white text-center py-4">
-  © <span id="year"></span> DreamRide Park. All Rights Reserved.
-</footer>
-
-<script>
-  // Auto update year
-  document.getElementById("year").innerText = new Date().getFullYear();
-
-  // Copy coupon function
-  function copyCoupon(code) {
-    navigator.clipboard.writeText(code);
-    alert(`✅ Coupon "${code}" copied!`);
+    // Update HTML
+    document.getElementById("d").innerText = d;
+    document.getElementById("h").innerText = h;
+    document.getElementById("m").innerText = m;
+    document.getElementById("s").innerText = s;
   }
 
-  // Countdown Timer
-  const countdownDate = new Date();
-  countdownDate.setDate(countdownDate.getDate() + 5); // 5 days offer
-  const timer = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
-
-    const days = Math.floor(distance / (1000*60*60*24));
-    const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-    const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-    const seconds = Math.floor((distance % (1000*60))/1000);
-
-    document.getElementById("days").innerText = days.toString().padStart(2,'0');
-    document.getElementById("hours").innerText = hours.toString().padStart(2,'0');
-    document.getElementById("minutes").innerText = minutes.toString().padStart(2,'0');
-    document.getElementById("seconds").innerText = seconds.toString().padStart(2,'0');
-
-    if(distance < 0){
-      clearInterval(timer);
-      document.getElementById("countdownTimer").innerHTML = "<strong>Offer Expired!</strong>";
-    }
-  }, 1000);
+  // Run immediately and every second
+  updateTimer();
+  setInterval(updateTimer, 1000);
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>
