@@ -18,84 +18,140 @@
 .carousel-item.active .zoom-img {
   transform: scale(1.15); /* zoom level */
 }
+body {
+      background: #fff8e1;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Slider Images */
+    .carousel-item img {
+      height: 70vh;
+      object-fit: cover;
+    }
+
+    .carousel-caption {
+      background: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Ride Cards */
+    .ride-card {
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.4s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    .ride-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255,105,180,0.4);
+    }
+
+    .ride-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .btn-kids {
+      background: #ff4081;
+      color: white;
+      border-radius: 30px;
+      padding: 8px 20px;
+    }
+
+    .btn-kids:hover {
+      background: #ff9800;
+      color: white;
+    }
+
+    footer {
+      background: #ff4081;
+      color: white;
+    }
 </style>
 </head>
 <body>
+<!-- header start -->
+ <header>
+    <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
+        <div class="container-fluid">
 
-    <!-- header section start -->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-info  navbar-dark navbar-gradient py-2">
-            <div class="container-fluid align-items-center">
-                <a class="navbar-brand d-flex align-items-center " href="index.html">
-                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="60" class="me-2">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link  " aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about us.html">About Us</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="entertainment.html" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Entertainment
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="horror-show.html">Horror Show</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="games.html">Games</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="lightshow.html">Light Show</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item active bg-primary" href="kidsZone.html">Kids Zone</a>
-                                </li>
-                            </ul>
-                        </li>
+            <!-- Logo + Name (Left) -->
+            <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
+                <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
+                DreamRide Park
+            </a>
 
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="tickets.html">Tickets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="offers.html">Offers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
-                        </li>
+            <!-- Right Side Menu -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="gallary.html" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Gallery
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="photo.html">Photos</a></li>
-                                <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
-                                <li><a class="dropdown-item" href="dinning.html">Dinning</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
+                    </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link nav-style" href="about us.html">About Us</a>
+                    </li>
 
-                            </ul>
+                    <!-- Entertainment -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                            Entertainment
+                        </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="horror-show.html">Horror Show</a></li>
+                            <li><a class="dropdown-item" href="games.html">Games</a></li>
+                            <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
+                            <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
+                        </ul>
+                    </li>
 
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
+                    </li>
 
-                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link nav-style" href="booking_new.html">Booking</a>
+                    </li>
 
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link nav-style" href="offers.html">Offers</a>
+                    </li>
+
+                    <!-- Gallery -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                            Gallery
+                        </a>
+                        <ul class="dropdown-menu animate-dropdown">
+                            <li><a class="dropdown-item" href="photo.html">Photos</a></li>
+                            <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
+                            <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
+                    </li>
+
+                </ul>
             </div>
-        </nav>
-    </header>
-    <!-- header section end -->
+        </div>
+    </nav>
+</header>
+
+
+<!-- header end -->
 
 
     <!-- Main Section start -->
@@ -145,6 +201,105 @@
  </section>
 
 </main>
+
+
+
+
+
+<!-- 🎡 Image Slider -->
+<div id="kidsSlider" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#kidsSlider" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#kidsSlider" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#kidsSlider" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1561489422-45de7f4f9c1d" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Fun for Every Child</h3>
+        <p>Enjoy magical moments in Kids Zone</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8f1" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Exciting Mini Rides</h3>
+        <p>Safe and colorful adventures</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" class="d-block w-100">
+      <div class="carousel-caption">
+        <h3>Laugh & Play</h3>
+        <p>Memories that last forever</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#kidsSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#kidsSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<!-- 🎠 Kids Rides Section -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h2>Our Kids Rides</h2>
+    <p>Safe, colorful & full of excitement!</p>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="ride-card">
+        <img src="https://images.unsplash.com/photo-1561489422-45de7f4f9c1d" class="ride-img">
+        <div class="p-3 text-center">
+          <h5>Merry-Go-Round</h5>
+          <p>Classic carousel ride for endless fun.</p>
+          <a href="#" class="btn btn-kids">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="ride-card">
+        <img src="img/mini_rollerCoaster.jpeg" class="ride-img">
+        <div class="p-3 text-center">
+          <h5>Mini Roller Coaster</h5>
+          <p>Safe adventure for kids.</p>
+          <a href="#" class="btn btn-kids">View Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="ride-card">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" class="ride-img">
+        <div class="p-3 text-center">
+          <h5>Bumper Cars</h5>
+          <p>Fun driving experience with friends.</p>
+          <a href="#" class="btn btn-kids">View Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- main section end -->
    
