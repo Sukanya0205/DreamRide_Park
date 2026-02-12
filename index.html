@@ -8,9 +8,107 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 
 
     <style>
+        /* ================= NAVBAR ================= */
+
+        /* Sticky navbar smooth shadow */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+
+        /* Nav link hover underline effect */
+        .navbar .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ================= DROPDOWN ================= */
+
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ================= CARDS HOVER ================= */
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ================= DINING IMAGE HOVER ================= */
+
+        section img {
+            transition: transform 0.4s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ================= BUTTON HOVER ================= */
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ================= TESTIMONIAL HOVER ================= */
+
+        .bg-light .col-md-4 {
+            transition: transform 0.3s ease;
+        }
+
+        .bg-light .col-md-4:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ================= SMOOTH SCROLL ================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+
+
         /* Hover dropdown (desktop only) */
         @media (min-width: 992px) {
             .navbar .dropdown:hover .dropdown-menu {
@@ -52,84 +150,84 @@
 </head>
 
 <body>
-  <!-- header start -->
- <header>
-    <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
-        <div class="container-fluid">
+    <!-- header start -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
+            <div class="container-fluid">
 
-            <!-- Logo + Name (Left) -->
-            <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
-                <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
-                DreamRide Park
-            </a>
+                <!-- Logo + Name (Left) -->
+                <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
+                    DreamRide Park
+                </a>
 
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Right Side Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
+                <!-- Right Side Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="about us.html">About Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="about us.html">About Us</a>
+                        </li>
 
-                    <!-- Entertainment -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Entertainment
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="horror-show.html">Horror Show</a></li>
-                            <li><a class="dropdown-item" href="games.html">Games</a></li>
-                            <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
-                            <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
-                        </ul>
-                    </li>
+                        <!-- Entertainment -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Entertainment
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="horror-show.html">Horror Show</a></li>
+                                <li><a class="dropdown-item" href="games.html">Games</a></li>
+                                <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
+                                <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="booking_new.html">Booking</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="booking_new.html">Booking</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="offers.html">Offers</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="offers.html">Offers</a>
+                        </li>
 
-                    <!-- Gallery -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Gallery
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="photo.html">Photos</a></li>
-                            <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
-                            <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
-                        </ul>
-                    </li>
+                        <!-- Gallery -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="photo.html">Photos</a></li>
+                                <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
+                                <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 
-<!-- header end -->
+    <!-- header end -->
 
     <!-- main section start -->
     <main>
@@ -196,58 +294,81 @@
     <!-- main section end -->
 
     <!-- About Section Start -->
-    <section class="mt-5 p-3">
-        <div class="container-fluid mt-5 p-3">
-            <div class="row mb-3">
-                <div class="col-md-8">
-                    <p>DreamRide Park is a modern amusement park designed to turn imagination into unforgettable
-                        experiences. Built around the theme of dreams, adventure, and joy, DreamRide Park offers a
-                        perfect blend of thrilling rides, family attractions, and relaxing entertainment zones. From
-                        high-speed roller coasters and gravity-defying rides for adrenaline lovers to colorful carousels
-                        and gentle rides for kids, the park caters to visitors of all ages.
+    <section class="py-5 bg-light">
+        <div class="container">
 
-                        The park is divided into beautifully themed zones, each representing a different dream
-                        world—Adventure Zone, Fantasy Land, Water World, and Fun Street. DreamRide Park also features
-                        exciting water rides, wave pools, and splash zones that provide relief and fun during hot days.
-                        Live shows, parades, and interactive performances add energy and magic to the overall
-                        experience.
-
-                        For food lovers, the park includes a variety of restaurants and food stalls offering local
-                        snacks, international cuisine, and refreshing beverages. Safety and comfort are top priorities
-                        at DreamRide Park, with trained staff, well-maintained rides, and modern facilities.</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid rounded shadow" src="img/amusement-park-ride-6775933_640.jpg" height="500"
-                        width="500">
-
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid rounded shadow" src="img/ride1.jpg" height="400" width="450">
-
-                </div>
-                <div class="col-md-8 ">
-                    <p>The park is home to a wide range of attractions, including high-energy thrill rides, immersive
-                        adventure zones, and interactive play areas for children. For visitors who prefer a calmer
-                        experience, DreamRide Park offers leisure rides, shaded resting areas, and live entertainment
-                        that can be enjoyed by all age groups. Special events, themed weekends, and festive celebrations
-                        make every visit unique and memorable.
-
-                        DreamRide Park also focuses on providing a complete guest experience. Well-organized food
-                        courts, refreshment kiosks, and souvenir stores ensure comfort and convenience throughout the
-                        day. Clean surroundings, trained staff, and advanced safety measures help create a secure and
-                        welcoming environment.
-
-                        Whether you’re visiting with friends, family, or colleagues, DreamRide Park promises laughter,
-                        excitement, and moments worth cherishing. It’s not just a park—it’s a destination where fun,
-                        imagination, and adventure come together.</p>
-                </div>
-
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-5">Welcome to DreamRide Park</h2>
+                <p class="text-muted">
+                    Where Thrill, Adventure & Joy Come Together
+                </p>
             </div>
-        </div>
-        <a class="btn btn-primary " href="about us.html" role="button">Link</a>
 
+            <!-- First Row -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-3">A World of Adventure</h4>
+                    <p>
+                        DreamRide Park is a modern amusement destination designed
+                        to turn imagination into unforgettable experiences.
+                        From high-speed roller coasters to colorful family rides,
+                        we offer attractions for visitors of all ages.
+                    </p>
+
+                    <p>
+                        Explore themed zones like <strong>Adventure Zone,
+                            Fantasy Land, Water World,</strong> and <strong>Fun Street</strong>
+                        — each crafted to deliver excitement and magical moments.
+                    </p>
+
+                    <a href="about us.html" class="btn btn-primary mt-3">
+                        Discover More
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="img/amusement-park-ride-6775933_640.jpg" class="img-fluid rounded shadow"
+                        style="height:350px; width:100%; object-fit:cover;" alt="Amusement Ride">
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <h4 class="fw-bold mb-3">Fun, Food & Safety</h4>
+                    <p>
+                        Enjoy thrilling water rides, wave pools, live shows,
+                        and interactive performances that bring energy to the park.
+                    </p>
+
+                    <p>
+                        With world-class safety standards, trained staff,
+                        delicious food courts, and modern facilities,
+                        DreamRide Park guarantees a safe and joyful experience.
+                    </p>
+                </div>
+
+                <div class="col-md-6 order-md-1">
+                    <img src="img/ride1.jpg" class="img-fluid rounded shadow"
+                        style="height:350px; width:100%; object-fit:cover;" alt="Park Ride">
+                </div>
+            </div>
+
+        </div>
     </section>
-    <!-- About section End -->
+    <!-- About Section End -->
+
+
+
+    <section class="bg-light text-aqua text-center py-5">
+        <div class="container">
+            <h2 class="fw-bold">Ready For An Unforgettable Adventure?</h2>
+            <p>Book your tickets today and experience the thrill!</p>
+            <a href="booking_new.html" class="btn btn-light btn-lg mt-3">Book Tickets Now</a>
+        </div>
+    </section>
+
 
 
 
@@ -255,7 +376,8 @@
 
     <div class="container">
         <div class="col-md-12 text-center">
-            <h3>Entertainment</h3>
+
+            <h2 class="fw-bold mb-4">Our Top Attractions</h2>
         </div>
     </div>
 
@@ -264,10 +386,10 @@
             <div class="row p-3">
                 <div class="col-md-3">
                     <!-- Card 1  -->
-                    <div class="card">
+                    <div class="card shadow-lg h-100">
                         <img src="img/h3horror.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Horror Show</h5>
+                            <h5 class="card-title"> <i class="bi bi-ghost me-2"></i>Horror Show</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card’s content.</p>
                             <a href="entertainment.html" class="btn btn-primary">Horror Show</a>
@@ -278,7 +400,7 @@
 
                 </div>
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card shadow-lg h-100">
                         <img src="img/h2games.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Games</h5>
@@ -291,7 +413,7 @@
                     <!-- Card 3-->
                 </div>
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card shadow-lg h-100">
                         <img src="img/h4light.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Light Show</h5>
@@ -304,7 +426,7 @@
 
                 </div>
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card shadow-lg h-100">
                         <img src="img/h1kid.jpeg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Kids Zone</h5>
@@ -324,6 +446,61 @@
     <!-- Entertainment Page End-->
 
 
+    <!--dinning section start  -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Delicious Food & Refreshment</h2>
+            <p class="mb-4">
+                From fast food to traditional meals, our food court offers
+                a wide range of cuisines to keep you energized throughout the day.
+            </p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/sponchia-sandwich-2977251_1280.jpg " alt="fast food" class="img-fluid"
+                        style="height:250px; width:100%; object-fit:cover;">
+                    <h5>Fast Food</h5>
+                    <p>Pizza , Burgers, Indian , Italian and More.</p>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="img/kandykandoo-sweet-3244685_1280.jpg" alt="sweet" class="img-fluid"
+                        style="height:250px; width:100%; object-fit:cover;">
+                    <h5>Desserts</h5>
+                    <p>Ice Creams, Shakes, Waffles & Sweets</p>
+
+
+                </div>
+                <div class="col-md-4">
+                    <img src="img/silviarita-smoothies-3176371_1280.jpg" alt="beverages" class="img-fluid"
+                        style="height:250px; width:100%; object-fit:cover;">
+                    <h5>Beverages</h5>
+                    <p>Fresh juices, mocktails & soft drinks.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Dinning section end -->
+
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">What Visitors Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>"Amazing experience! The rides were thrilling and safe."</p>
+                    <h6>- Priya Sharma</h6>
+                </div>
+                <div class="col-md-4">
+                    <p>"Best family outing spot in Pune!"</p>
+                    <h6>- Rahul Patil</h6>
+                </div>
+                <div class="col-md-4">
+                    <p>"Food court was excellent and clean."</p>
+                    <h6>- Sneha Joshi</h6>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <footer>
@@ -365,9 +542,10 @@
                         <!-- Section 4: Contact -->
                         <div class="col-lg-3 mb-4">
                             <h4 class="text-uppercase">Contact Info</h4>
-                            <p>Email: info@dreamridepark.com</p>
-                            <p>Phone: +91 9284501805</p>
-                            <p>Location: Pune, Maharashtra</p>
+                            <p><i class="bi bi-envelope-fill me-2"></i>info@dreamridepark.com</p>
+                            <p><i class="bi bi-telephone-fill me-2"></i>+91 9284501805</p>
+                            <p><i class="bi bi-geo-alt-fill me-2"></i>Pune, Maharashtra</p>
+
                         </div>
 
                     </div>
@@ -375,7 +553,7 @@
                     <hr class="border-secondary">
 
                     <!-- Footer Bottom -->
-                    <div class="text-center pb-3">
+                    <div class="text-center pb-3 ">
                         <p class="mb-0">
                             © 2026 DreamRide Park. All Rights Reserved.
 
@@ -398,6 +576,11 @@
 
 
     </footer>
+
+
+
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
