@@ -23,16 +23,49 @@
         }
 
         /* Navbar Hover */
-        .navbar .nav-link {
-            transition: color 0.3s ease, background 0.3s ease;
-            border-radius: 6px;
-            padding: 6px 12px;
+        /* Sticky navbar smooth shadow */
+        .navbar {
+            transition: all 0.3s ease;
         }
 
-        .navbar .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
+        /* Nav link hover underline effect */
+        .navbar .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+       
+
+        /* ================= DROPDOWN ================= */
+
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+       
 
         /* Image Hover */
         img {
@@ -140,7 +173,8 @@
 
 <body>
      <!-- header start -->
-    <header>
+   <!-- header start -->
+    
         <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
             <div class="container-fluid">
 
@@ -213,8 +247,10 @@
                 </div>
             </div>
         </nav>
-    </header>
+    
 
+
+    <!-- header end -->
 
     <!-- header end -->
 
