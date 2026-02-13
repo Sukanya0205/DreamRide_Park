@@ -63,6 +63,47 @@
                 text-align: center;
             }
         }
+        /* Sticky navbar smooth shadow */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+
+        /* Nav link hover underline effect */
+        .navbar .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ================= DROPDOWN ================= */
+
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
     
   </style>
 </head>
@@ -70,79 +111,84 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
-        <div class="container-fluid">
+    <!-- header start -->
+    
+        <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
+            <div class="container-fluid">
 
-            <!-- Logo + Name (Left) -->
-            <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
-                <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
-                DreamRide Park
-            </a>
+                <!-- Logo + Name (Left) -->
+                <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
+                    DreamRide Park
+                </a>
 
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Right Side Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
+                <!-- Right Side Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link  nav-style" href="index.html">Home</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link  nav-style " href="index.html">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="about us.html">About Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="about us.html">About Us</a>
+                        </li>
 
-                    <!-- Entertainment -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Entertainment
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="horror-show.html">Horror Show</a></li>
-                            <li><a class="dropdown-item" href="games.html">Games</a></li>
-                            <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
-                            <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
-                        </ul>
-                    </li>
+                        <!-- Entertainment -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Entertainment
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="horror-show.html">Horror Show</a></li>
+                                <li><a class="dropdown-item" href="games.html">Games</a></li>
+                                <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
+                                <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active nav-style bg-primary" href="booking_new.html">Booking</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-style bg-primary" href="booking_new.html">Booking</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="offers1.html">Offers</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="offers1.html">Offers</a>
+                        </li>
 
-                    <!-- Gallery -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Gallery
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="photo.html">Photos</a></li>
-                            <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
-                            <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
-                        </ul>
-                    </li>
+                        <!-- Gallery -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="photo.html">Photos</a></li>
+                                <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
+                                <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    
 
+
+    <!-- header end -->
 
 <!-- HERO -->
 <section class="booking-hero">
@@ -290,59 +336,79 @@
 </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-info text-white pt-5 mt-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 mb-4">
-            <h4>DreamRide Park</h4>
-            <p>
-              DreamRide Park offers thrilling rides, fun attractions, and
-              unforgettable family experiences.
-            </p>
-          </div>
 
-          <div class="col-lg-3 mb-4">
-            <h4>Quick Links</h4>
-            <ul class="list-unstyled">
-              <li>
-                <a href="index.html" class="text-white text-decoration-none"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="tickets2.html" class="text-white text-decoration-none"
-                  >Tickets</a
-                >
-              </li>
-              <li>
-                <a href="contact_us1.html" class="text-white text-decoration-none"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
+        <!-- footer section start -->
+        <section>
+            <footer class="bg-info text-dark pt-5">
+                <div class="container">
+                    <div class="row">
 
-          <div class="col-lg-3 mb-4">
-            <h4>Park Timings</h4>
-            <p>Mon–Fri: 10 AM – 7 PM</p>
-            <p>Sat–Sun: 10 AM – 9 PM</p>
-          </div>
+                        <!-- Section 1: About -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">DreamRide Park</h4>
+                            <p>
+                                DreamRide Park is a world-class amusement park offering thrilling rides,
+                                fun attractions, and unforgettable family experiences.
+                            </p>
+                        </div>
 
-          <div class="col-lg-3 mb-4">
-            <h4>Contact</h4>
-            <p>Email: info@dreamridepark.com</p>
-            <p>Phone: +91 9284501805</p>
-            <p>Location: Pune, Maharashtra</p>
-          </div>
-        </div>
+                        <!-- Section 2: Quick Links -->
+                        <div class="col-lg-3 mb-4  text-dark">
+                            <h4 class="text-uppercase">Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="entertainment.html"
+                                        class="text-light text-decoration-none">Entertainment</a></li>
+                                <li><a href="tickets2.html" class="text-light text-decoration-none">Tickets</a></li>
+                                <li><a href="contact_us1.html" class="text-light text-decoration-none">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
 
-        <hr />
-        <p class="text-center mb-0 pb-3">
-          © 2026 DreamRide Park. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+                        <!-- Section 3: Timings -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">Park Timings</h4>
+                            <p>Monday - Friday: 10:00 AM - 7:00 PM</p>
+                            <p>Saturday - Sunday: 10:00 AM -9:00 PM</p>
+                        </div>
+
+                        <!-- Section 4: Contact -->
+                        <div class="col-lg-3 mb-4">
+                            <h4 class="text-uppercase">Contact Info</h4>
+                            <p><i class="bi bi-envelope-fill me-2"></i>info@dreamridepark.com</p>
+                            <p><i class="bi bi-telephone-fill me-2"></i>+91 9284501805</p>
+                            <p><i class="bi bi-geo-alt-fill me-2"></i>Pune, Maharashtra</p>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="border-secondary">
+
+                    <!-- Footer Bottom -->
+                    <div class="text-center pb-3 ">
+                        <p class="mb-0">
+                            © 2026 DreamRide Park. All Rights Reserved.
+
+                        </p>
+                        <script>
+                            var now = new Date();
+                            document.write(now.getFullYear(), "<br>");//copyright section
+
+                            document.write(now.toLocaleTimeString(), "<br>")
+
+
+                        </script>
+                    </div>
+                </div>
+            </footer>
+
+
+        </section>
+        <!-- Footer section End -->
+
+
+    
 
 <!-- JS -->
 <script>
