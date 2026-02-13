@@ -50,6 +50,53 @@
             border: none;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
+
+        
+  
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.7);
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: white;
+      padding: 60px 0 30px;
+      font-weight: bold;
+    }
+
+    .card {
+      transition: 0.4s;
+      border: none;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .btn-custom {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #e64a19;
+      color: white;
+    }
+
         </style>
 </head>
 <body>
@@ -135,153 +182,95 @@
 
 <!-- main section start -->
 
-<!-- 
- HERO SECTION  -->
-<section class="hero">
-    <div>
-        <h1 class="display-4">Ultimate Game Zone</h1>
-        <p>Experience Thrilling Challenges & Win Exciting Rewards</p>
-        <a href="booking_new.html" class="btn btn-light btn-lg mt-3 rounded-pill">Play Now</a>
-    </div>
-</section>
+<div class="overlay">
 
-<!-- GAMES SECTION -->
-<div class="container">
-
-    <h2 class="section-title">Our Popular Games</h2>
+  <div class="container">
+    <h2 class="section-title">🎯 Fun & Skill Games</h2>
 
     <div class="row g-4">
 
-        <!-- Shooting Game -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card game-card h-100 position-relative">
-                <span class="badge badge-timing position-absolute top-0 start-0 m-3">10:00 AM</span>
-                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹150</span>
-
-                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="card-img-top">
-
-                <div class="card-body text-center">
-                    <div class="icon-box mb-3">
-                        <i class="bi bi-bullseye"></i>
-                    </div>
-                    <h5 class="fw-bold">Shooting Arena</h5>
-                    <p>Test your aim and win exciting prizes in this thrilling target game.</p>
-                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
-                </div>
-            </div>
+      <!-- Ring Toss -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1601758064226-0e0b49e9b98e" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ring Toss Game</h5>
+            <p>Throw rings and win exciting prizes!</p>
+            
+          </div>
         </div>
+      </div>
 
-        <!-- Basketball Game -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card game-card h-100 position-relative">
-                <span class="badge badge-timing position-absolute top-0 start-0 m-3">11:30 AM</span>
-                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹120</span>
-
-                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf" class="card-img-top">
-
-                <div class="card-body text-center">
-                    <div class="icon-box mb-3">
-                        <i class="bi bi-dribbble"></i>
-                    </div>
-                    <h5 class="fw-bold">Basketball Challenge</h5>
-                    <p>Score maximum baskets within time and become the champion.</p>
-                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
-                </div>
-            </div>
+      <!-- Balloon Shooting -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Balloon Shooting</h5>
+            <p>Aim and shoot balloons to win rewards.</p>
+            
+          </div>
         </div>
+      </div>
 
-        <!-- Racing Game -->
-        <div class="col-lg-4 col-md-6">
-            <div class="card game-card h-100 position-relative">
-                <span class="badge badge-timing position-absolute top-0 start-0 m-3">1:00 PM</span>
-                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹200</span>
-
-                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6" class="card-img-top">
-
-                <div class="card-body text-center">
-                    <div class="icon-box mb-3">
-                        <i class="bi bi-speedometer2"></i>
-                    </div>
-                    <h5 class="fw-bold">Car Racing Simulator</h5>
-                    <p>Experience high-speed virtual racing with realistic controls.</p>
-                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
-                </div>
-            </div>
+      <!-- VR Game -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1581090700227-4c4f50c6d5e5" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">VR Gaming Zone</h5>
+            <p>Experience thrilling virtual reality adventures.</p>
+            
+          </div>
         </div>
+      </div>
+
+      <!-- Basketball Toss -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Basketball Toss</h5>
+            <p>Score maximum points and win prizes.</p>
+        
+          </div>
+        </div>
+      </div>
+
+      <!-- Arcade Zone -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Arcade Zone</h5>
+            <p>Enjoy classic and modern video games.</p>
+           
+          </div>
+        </div>
+      </div>
+
+      <!-- Lucky Draw -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="https://images.unsplash.com/photo-1520975922203-b5d1b8c5e04d" class="card-img-top">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lucky Draw</h5>
+            <p>Try your luck and win surprise gifts!</p>
+           
+          </div>
+        </div>
+      </div>
 
     </div>
+  </div>
+
 </div>
 
-<!-- GAME SCHEDULE -->
-<div class="container my-5">
-    <h2 class="section-title">Game Schedule</h2>
-
-    <div class="row g-4 text-center">
-
-        <div class="col-md-4">
-            <div class="schedule-box">
-                <h5>Morning Session</h5>
-                <p>10:00 AM – 1:00 PM</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="schedule-box">
-                <h5>Afternoon Session</h5>
-                <p>1:00 PM – 4:00 PM</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="schedule-box">
-                <h5>Evening Session</h5>
-                <p>4:00 PM – 8:00 PM</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- WHY PLAY -->
-<div class="container my-5">
-    <h2 class="section-title">Why Choose Our Game Zone?</h2>
-
-    <div class="row text-center g-4">
-
-        <div class="col-md-4">
-            <div>
-                <i class="bi bi-trophy-fill icon-box"></i>
-                <h5 class="mt-3">Win Amazing Prizes</h5>
-                <p>Exciting rewards for top performers.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div>
-                <i class="bi bi-people-fill icon-box"></i>
-                <h5 class="mt-3">Fun for Everyone</h5>
-                <p>Games suitable for all age groups.</p>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div>
-                <i class="bi bi-controller icon-box"></i>
-                <h5 class="mt-3">Latest Equipment</h5>
-                <p>Modern and safe gaming environment.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- main section end -->
 
 
 
-
-
-
+<!-- 
+main section end -->
 
 
 
