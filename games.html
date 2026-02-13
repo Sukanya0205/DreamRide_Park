@@ -6,87 +6,360 @@
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <style>
+        /*  NAVBAR */ 
+
+        /* Sticky navbar smooth shadow */
+        .navbar {
+            transition: all 0.3s ease;
+        }
+
+        /* Nav link hover underline effect */
+        .navbar .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ================= DROPDOWN ================= */
+
+        @media (min-width: 992px) {
+            .navbar .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        </style>
 </head>
 <body>
-<!-- header start -->
- <header>
-    <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
-        <div class="container-fluid">
+      <!-- header start -->
+    
+        <nav class="navbar navbar-expand-lg bg-info sticky-top py-2 shadow">
+            <div class="container-fluid">
 
-            <!-- Logo + Name (Left) -->
-            <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
-                <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
-                DreamRide Park
-            </a>
+                <!-- Logo + Name (Left) -->
+                <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="index.html">
+                    <img src="img/amusement park logo.png" alt="DreamRide Park" height="70" class="me-2">
+                    DreamRide Park
+                </a>
 
-            <!-- Toggle Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Right Side Menu -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
+                <!-- Right Side Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
 
-                    <li class="nav-item">
-                        <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active nav-style bg-primary" href="index.html">Home</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="about us.html">About Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="about us.html">About Us</a>
+                        </li>
 
-                    <!-- Entertainment -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Entertainment
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="horror.html">Horror Show</a></li>
-                            <li><a class="dropdown-item" href="games.html">Games</a></li>
-                            <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
-                            <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
-                        </ul>
-                    </li>
+                        <!-- Entertainment -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Entertainment
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="horror.html">Horror Show</a></li>
+                                <li><a class="dropdown-item" href="games.html">Games</a></li>
+                                <li><a class="dropdown-item" href="lightshow.html">Light Show</a></li>
+                                <li><a class="dropdown-item" href="kidsZone.html">Kids Zone</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="tickets2.html">Tickets</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="booking_new.html">Booking</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="booking_new.html">Booking</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="offers.html">Offers</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="offers1.html">Offers</a>
+                        </li>
 
-                    <!-- Gallery -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
-                            Gallery
-                        </a>
-                        <ul class="dropdown-menu animate-dropdown">
-                            <li><a class="dropdown-item" href="photo.html">Photos</a></li>
-                            <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
-                            <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
-                        </ul>
-                    </li>
+                        <!-- Gallery -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle nav-style" href="#" role="button">
+                                Gallery
+                            </a>
+                            <ul class="dropdown-menu animate-dropdown">
+                                <li><a class="dropdown-item" href="photo.html">Photos</a></li>
+                                <li><a class="dropdown-item" href="vedio.html">Videos</a></li>
+                                <li><a class="dropdown-item" href="dinning.html">Dining</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-style" href="contact_us1.html">Contact Us</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+
+
+    <!-- header end -->
+
+
+<!-- main section start -->
+
+<!-- 
+ HERO SECTION  -->
+<section class="hero">
+    <div>
+        <h1 class="display-4">Ultimate Game Zone</h1>
+        <p>Experience Thrilling Challenges & Win Exciting Rewards</p>
+        <a href="booking_new.html" class="btn btn-light btn-lg mt-3 rounded-pill">Play Now</a>
+    </div>
+</section>
+
+<!-- GAMES SECTION -->
+<div class="container">
+
+    <h2 class="section-title">Our Popular Games</h2>
+
+    <div class="row g-4">
+
+        <!-- Shooting Game -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card game-card h-100 position-relative">
+                <span class="badge badge-timing position-absolute top-0 start-0 m-3">10:00 AM</span>
+                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹150</span>
+
+                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <h5 class="fw-bold">Shooting Arena</h5>
+                    <p>Test your aim and win exciting prizes in this thrilling target game.</p>
+                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
+                </div>
             </div>
         </div>
-    </nav>
-</header>
+
+        <!-- Basketball Game -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card game-card h-100 position-relative">
+                <span class="badge badge-timing position-absolute top-0 start-0 m-3">11:30 AM</span>
+                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹120</span>
+
+                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-dribbble"></i>
+                    </div>
+                    <h5 class="fw-bold">Basketball Challenge</h5>
+                    <p>Score maximum baskets within time and become the champion.</p>
+                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Racing Game -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card game-card h-100 position-relative">
+                <span class="badge badge-timing position-absolute top-0 start-0 m-3">1:00 PM</span>
+                <span class="badge badge-price position-absolute top-0 end-0 m-3">₹200</span>
+
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6" class="card-img-top">
+
+                <div class="card-body text-center">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-speedometer2"></i>
+                    </div>
+                    <h5 class="fw-bold">Car Racing Simulator</h5>
+                    <p>Experience high-speed virtual racing with realistic controls.</p>
+                    <a href="booking_new.html" class="btn btn-primary btn-play">Play Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- GAME SCHEDULE -->
+<div class="container my-5">
+    <h2 class="section-title">Game Schedule</h2>
+
+    <div class="row g-4 text-center">
+
+        <div class="col-md-4">
+            <div class="schedule-box">
+                <h5>Morning Session</h5>
+                <p>10:00 AM – 1:00 PM</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="schedule-box">
+                <h5>Afternoon Session</h5>
+                <p>1:00 PM – 4:00 PM</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="schedule-box">
+                <h5>Evening Session</h5>
+                <p>4:00 PM – 8:00 PM</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- WHY PLAY -->
+<div class="container my-5">
+    <h2 class="section-title">Why Choose Our Game Zone?</h2>
+
+    <div class="row text-center g-4">
+
+        <div class="col-md-4">
+            <div>
+                <i class="bi bi-trophy-fill icon-box"></i>
+                <h5 class="mt-3">Win Amazing Prizes</h5>
+                <p>Exciting rewards for top performers.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <i class="bi bi-people-fill icon-box"></i>
+                <h5 class="mt-3">Fun for Everyone</h5>
+                <p>Games suitable for all age groups.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <i class="bi bi-controller icon-box"></i>
+                <h5 class="mt-3">Latest Equipment</h5>
+                <p>Modern and safe gaming environment.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- main section end -->
 
 
-<!-- header end -->
+
+
+
+
+
+
+
     
+    <footer>
+        <!-- footer section start -->
+        <section>
+            <footer class="bg-info text-dark pt-5">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- Section 1: About -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">DreamRide Park</h4>
+                            <p>
+                                DreamRide Park is a world-class amusement park offering thrilling rides,
+                                fun attractions, and unforgettable family experiences.
+                            </p>
+                        </div>
+
+                        <!-- Section 2: Quick Links -->
+                        <div class="col-lg-3 mb-4  text-dark">
+                            <h4 class="text-uppercase">Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="entertainment.html"
+                                        class="text-light text-decoration-none">Entertainment</a></li>
+                                <li><a href="tickets2.html" class="text-light text-decoration-none">Tickets</a></li>
+                                <li><a href="contact_us1.html" class="text-light text-decoration-none">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Section 3: Timings -->
+                        <div class="col-lg-3  mb-4">
+                            <h4 class="text-uppercase">Park Timings</h4>
+                            <p>Monday - Friday: 10:00 AM - 7:00 PM</p>
+                            <p>Saturday - Sunday: 10:00 AM -9:00 PM</p>
+                        </div>
+
+                        <!-- Section 4: Contact -->
+                        <div class="col-lg-3 mb-4">
+                            <h4 class="text-uppercase">Contact Info</h4>
+                            <p><i class="bi bi-envelope-fill me-2"></i>info@dreamridepark.com</p>
+                            <p><i class="bi bi-telephone-fill me-2"></i>+91 9284501805</p>
+                            <p><i class="bi bi-geo-alt-fill me-2"></i>Pune, Maharashtra</p>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="border-secondary">
+
+                    <!-- Footer Bottom -->
+                    <div class="text-center pb-3 ">
+                        <p class="mb-0">
+                            © 2026 DreamRide Park. All Rights Reserved.
+
+                        </p>
+                        <script>
+                            var now = new Date();
+                            document.write(now.getFullYear(), "<br>");//copyright section
+
+                            document.write(now.toLocaleTimeString(), "<br>")
+
+
+                        </script>
+                    </div>
+                </div>
+            </footer>
+
+
+        </section>
+        <!-- Footer section End -->
+
+
+    </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
